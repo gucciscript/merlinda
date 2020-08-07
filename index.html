@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>🍑 Happy Birthday Malinda 🍑</title>
     <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@800&display=swap" rel="stylesheet">
-	<link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
-  />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
     <style>
 	  body {
 		font-family: 'Rubik', sans-serif;
@@ -23,16 +20,25 @@
 			-webkit-text-stroke-width: 1px;
 			-webkit-text-stroke-color: peru;
 			margin: 0;
+			z-index:2;
+		}
+
+		h2 {
+			text-align: center;
+			-webkit-text-fill-color: peachpuff; /* Will override color (regardless of order) */
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: peru;
+			margin: 0;
 		}
 
 		@media (min-width: 1px) { 
-			h1 {
+			h1, h2 {
 				font-size: 4rem;
 			}
 		}
 
 		@media (min-width: 767.98px) { 
-			h1 {
+			h1, h2 {
 				font-size: 5rem;
 			} 
 		}
@@ -70,16 +76,18 @@
   </head>
   <body style="overflow: hidden;">
 		<div class="center-content">
-			<h1>🍑</h1>
+			<h2>🍑</h2>
 			<h1>Happy</h1>
 			<h1>Birthday</h1>
 			<h1>Malinda!</h1>
-			<h1>🍑</h1>
+			<h2>🍑</h2>
 		</div>
 	<div class="body-background"></div>
     <script src="https://code.jquery.com/jquery-1.8.3.min.js" integrity="sha256-YcbK69I5IXQftf/mYD8WY0/KmEDCv1asggHpJk1trM8=" crossorigin="anonymous"></script>
     <script>
 		$(function(){
+			var animationTime = 500;
+			var chillTime = animationTime * 3;
 			var animationsIn = [
 				'jackInTheBox',
 				'rollIn',
@@ -91,7 +99,6 @@
 				'rotateIn',
 				'zoomIn'
 			];
-
 			var animationsOut = [
 				'hinge',
 				'rollOut',
@@ -103,7 +110,6 @@
 				'rotateOut',
 				'zoomOut'
 			];
-			
 			var imgs = [
 				'https://cdn.iconscout.com/icon/free/png-256/peach-fruit-emoj-symbol-food-30672.png',
 				'https://lh3.googleusercontent.com/EIID6qEoHeO0PbUEVVo7m9_IDc4YPSda8RkRLnzTo5K9QlLkqyT9kwUBL4FEAFMaIsfCj1gnNw=w128-h128-e365',
@@ -152,50 +158,64 @@
 				'https://vignette.wikia.nocookie.net/landbeforetime/images/f/fe/LBT_HeroImage_v1.png/revision/latest?cb=20180422005007',
 				'https://i.pinimg.com/originals/db/b3/4a/dbb34a4ac48218b92d5a783229f11f9e.png',
 				'https://i.pinimg.com/originals/fb/06/65/fb0665fb4337e244ef56cf2b6ece1347.png',
-				'https://www.uokpl.rs/fpng/f/295-2959956_donaldglover-childishgambino-actor.png'
+				'https://www.uokpl.rs/fpng/f/295-2959956_donaldglover-childishgambino-actor.png',
+				'https://pbs.twimg.com/profile_images/1207831148853784576/t8SZsyAe_400x400.jpg',
+				'https://cdn130.picsart.com/309538926075211.png?type=webp&to=min&r=640',
+				'https://fbschedules.com/wp-content/uploads/2019/06/dc-defenders-logo-2020.png',
+				'https://media2.fdncms.com/clevescene/imager/u/original/31412807/tim564.jpeg',
+				'https://vet.uga.edu/wp-content/uploads/2019/04/bulldog.png',
+				'https://georgiadogs.com/images/2018/4/6/Georgia_logo_bulldoghead_250.png',
+				'https://i.pinimg.com/originals/99/72/f2/9972f24fd63726fffa4023736f33fa47.png',
+				'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/421dcea1-ad22-471a-9e15-d1518417f327/dcpeb7c-f74a0627-5583-4aed-aa88-62533d2edb6e.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNDIxZGNlYTEtYWQyMi00NzFhLTllMTUtZDE1MTg0MTdmMzI3XC9kY3BlYjdjLWY3NGEwNjI3LTU1ODMtNGFlZC1hYTg4LTYyNTMzZDJlZGI2ZS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.KFC15grWOcmh4U_LgFEomn8zndOXok6mMA-kyBSidjw',
+				'https://static.tvtropes.org/pmwiki/pub/images/kaiman_anime_design.png',
+				'https://66.media.tumblr.com/97f6b138f292562baf07d3b25784c795/tumblr_otydeiIbLr1ur4rayo5_250.png',
+				'https://i.pinimg.com/originals/50/f8/11/50f811f2b1e1cae7f2b55358e3d4915f.gif'
 			];
 
 			function getRandom(max) {
 				return Math.floor(Math.random()*max);
 			}
 
-			function teleport(num) {
-				var amount = getRandom(5);
+			function stagger(num) {
+				var amount = getRandom(10);
 				var direction = getRandom(2) === 1 ? -1 : 1;
 
 				return num + (amount * direction);
 			}
 
-			function createImageAtRandom() {
+			function createImageAtRandom() {				
+				var inIndex = getRandom(animationsIn.length - 1);
+				var outIndex = getRandom(animationsOut.length - 1);
+				var imgIndex = getRandom(imgs.length - 1);
+
+				var animateNameIn = 'animate__' + animationsIn[inIndex];
+				var animateNameOut = 'animate__' + animationsOut[outIndex];
+				var imgName = imgs[imgIndex];
+
 				var x = getRandom(window.innerWidth * .7);
 				var y = getRandom(window.innerHeight * .7);
-				var animationTime = 500;
-				var chillTime = animationTime * 3;
 
-				var animateNameIn = 'animate__' + (animationsIn[getRandom(animationsIn.length)] || animationsIn[0]);
-				var animateNameOut = 'animate__' + (animationsOut[getRandom(animationsOut.length)] || animationsOut[0]);
-				var imgName = imgs[getRandom(imgs.length - 1)] || imgs[0];
-
-				var div = $('<div class="image-wrapper animate__animated animate__faster ' + animateNameIn + '">')
+				var div = $('<div>')
+					.addClass('image-wrapper')
+					.addClass('animate__animated')
+					.addClass('animate__faster')
+					.addClass(animateNameIn)
 					.css({
-						"left":  teleport(x) + 'px',
-						"top": teleport(y) + 'px'
+						left:  stagger(x) + 'px',
+						top: stagger(y) + 'px'
 					})
 					.append($('<img src="' + imgName + '"/>'))
 					.appendTo(document.body);
 
 				setTimeout(function() {
-					div.removeClass(animateNameIn);
-					div.addClass(animateNameOut);
-					setTimeout(function() { 
-						div.remove(); 
-					}, animationTime);
+					div.removeClass(animateNameIn).addClass(animateNameOut);
+					setTimeout(function() { div.remove(); }, animationTime);
 				}, chillTime);
 
 				setTimeout(createImageAtRandom, getRandom(300) + 400);
 			}
 
-			createImageAtRandom();
+			setTimeout(createImageAtRandom, 300);
 		});
     </script>
   </body>
